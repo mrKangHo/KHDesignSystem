@@ -55,6 +55,25 @@ public struct KHFont {
     
 }
 
+public extension KHFont {
+    
+    static let display01 = Font.custom(FontType.Bold.name, size: 40)
+    static let display02 = Font.custom(FontType.Bold.name, size: 32)
+    
+    static let title01 = Font.custom(FontType.Bold.name, size: 28)
+    static let title02 = Font.custom(FontType.Bold.name, size: 24)
+    static let title03 = Font.custom(FontType.Bold.name, size: 20)
+    
+    static let subTitle01 = Font.custom(FontType.Medium.name, size: 20)
+    static let subTitle02 = Font.custom(FontType.Medium.name, size: 16)
+    static let subTitle03 = Font.custom(FontType.Medium.name, size: 14)
+    
+    static let body01 = Font.custom(FontType.Light.name, size: 15)
+    static let body02 = Font.custom(FontType.Light.name, size: 14)
+    
+    
+}
+
 
 public extension Font {
     
