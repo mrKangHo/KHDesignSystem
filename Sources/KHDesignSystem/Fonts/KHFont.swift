@@ -74,7 +74,45 @@ public extension KHFont {
     
 }
 
+ 
+public struct KHFontStyle {
+    var font:Font
+    var lineSpacing:CGFloat
+}
 
-public extension Font {
+public extension KHFontStyle {
     
+    static let display01 = KHFontStyle(font: KHFont.display01, lineSpacing: 2)
+    static let display02 = KHFontStyle(font: KHFont.display02, lineSpacing: 2)
+    
+    static let title01 = KHFontStyle(font: KHFont.title01, lineSpacing: 0)
+    static let title02 = KHFontStyle(font: KHFont.title02, lineSpacing: 0)
+    static let title03 = KHFontStyle(font: KHFont.title03, lineSpacing: 0)
+    
+    
+    static let subTitle01 = KHFontStyle(font: KHFont.subTitle01, lineSpacing: 4)
+    static let subTitle02 = KHFontStyle(font: KHFont.subTitle02, lineSpacing: 4)
+    static let subTitle03 = KHFontStyle(font: KHFont.subTitle03, lineSpacing: 4)
+    
+    static let body01 = KHFontStyle(font: KHFont.body01, lineSpacing: 2)
+    static let body02 = KHFontStyle(font: KHFont.body02, lineSpacing: 2)
+    
+    
+}
+
+
+public struct KHFontModifier : ViewModifier {
+    var style: KHFontStyle
+    
+    
+    public func body(content: Content) -> some View {
+        content.font(style.font).lineSpacing(style.lineSpacing)
+    }
+    
+}
+
+public extension View {
+    func appleyFontStyle(_ style:KHFontStyle) -> some View {
+        self.modifier(KHFontModifier(style: style))
+    }
 }
