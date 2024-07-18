@@ -112,7 +112,7 @@ public struct KHFontModifier : ViewModifier {
 }
 
 public extension View {
-    func appleyFontStyle(_ style:KHFontStyle) -> some View {
+    func applyFont(_ style:KHFontStyle) -> some View {
         self.modifier(KHFontModifier(style: style))
     }
 }
