@@ -16,7 +16,7 @@ public struct KHTextField: View {
     public var font:Font
     
 
-    init(text: Binding<String>, 
+    public init(text: Binding<String>, 
          placeHolder: String? = nil,
          symboldIcon: Image? = nil,
          keyboardType: UIKeyboardType = .default,
