@@ -8,14 +8,26 @@
 import SwiftUI
 
 public struct KHTextField: View {
-    @Binding public  var text:String
-    
+    @Binding public var text:String
+    @FocusState private var isFocused: Bool
     public var placeHolder:String?
     public var symboldIcon:Image?
-    public var keyboardType:UIKeyboardType = .default
-    public var font:Font = KHFont.subTitle02
-    @FocusState private var isFocused: Bool
+    public var keyboardType:UIKeyboardType
+    public var font:Font
+    
 
+    init(text: Binding<String>, 
+         placeHolder: String? = nil,
+         symboldIcon: Image? = nil,
+         keyboardType: UIKeyboardType = .default,
+         font: Font = KHFont.subTitle02) {
+        self._text = text
+        self.placeHolder = placeHolder
+        self.symboldIcon = symboldIcon
+        self.keyboardType = keyboardType
+        self.font = font
+    }
+    
     public var body: some View {
         HStack {
             symboldIcon.foregroundColor(isFocused ? KHColor.Primary.P00 : .gray).frame(width:44, height: 44)
@@ -30,11 +42,19 @@ public struct KHTextField: View {
     }
 }
 
+
+struct ContentView: View {
+    @State private var inputText: String = ""
+
+    var body: some View {
+        VStack {
+            KHTextField(text: $inputText)
+            Text("You entered: \(inputText)")
+        }
+        .padding()
+    }
+}
 #Preview {
-    @State var text:String = ""
-    
-    let tf = KHTextField(text: $text, placeHolder: "텍스트를 입력하세요", symboldIcon: Image(systemName: "magnifyingglass"))
-    print(text)
-    return tf
+    ContentView()
     
 }
