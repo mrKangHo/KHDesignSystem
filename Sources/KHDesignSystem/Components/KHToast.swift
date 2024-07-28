@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct KHToast: View {
+public  struct KHToast: View {
     
-    var toastText: String
+    public  var toastText: String
     
-    @Binding var isShowing:Bool
+    @Binding public  var isShowing:Bool
 
-    var body: some View {
+    public  var body: some View {
         VStack {
             Spacer()
             HStack {

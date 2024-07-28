@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct KHTextField: View {
-    @Binding var text:String
+public struct KHTextField: View {
+    @Binding public  var text:String
     
-    var placeHolder:String?
-    var symboldIcon:Image?
-    var keyboardType:UIKeyboardType = .default
-    var font:Font = KHFont.subTitle02
+    public var placeHolder:String?
+    public var symboldIcon:Image?
+    public var keyboardType:UIKeyboardType = .default
+    public var font:Font = KHFont.subTitle02
     @FocusState private var isFocused: Bool
 
-    var body: some View {
+    public var body: some View {
         HStack {
             symboldIcon.foregroundColor(isFocused ? KHColor.Primary.P00 : .gray).frame(width:44, height: 44)
             TextField(placeHolder ?? "", text: $text).keyboardType(keyboardType).font(font)
