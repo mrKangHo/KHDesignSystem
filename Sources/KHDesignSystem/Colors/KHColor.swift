@@ -88,6 +88,21 @@ extension KHColor {
         public static let LB70 = KHColor.dynamicColor("#505050", dark: "#C3C3C3")
     }
     
+    public struct Gray {
+        private init() {}
+        public static let GR00 = KHColor.dynamicColor("#FAFAFA", dark: "#050505")
+        public static let GR10 = KHColor.dynamicColor("#F2F3F3", dark: "#0C0D0D")
+        public static let GR20 = KHColor.dynamicColor("#E7E9E9", dark: "#161818")
+        public static let GR30 = KHColor.dynamicColor("#DADDDD", dark: "#222525")
+        public static let GR40 = KHColor.dynamicColor("#C9CFCF", dark: "#303636")
+        public static let GR50 = KHColor.dynamicColor("#B7BEBE", dark: "#414848")
+        public static let GR60 = KHColor.dynamicColor("#A1AAAA", dark: "#555E5E")
+        public static let GR70 = KHColor.dynamicColor("#899494", dark: "#6B7676")
+        public static let GR80 = KHColor.dynamicColor("#6F7B7B", dark: "#849090")
+        public static let GR90 = KHColor.dynamicColor("#525B5B", dark: "#A4ADAD")
+        
+    }
+    
 }
 
  
