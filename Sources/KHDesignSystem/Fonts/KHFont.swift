@@ -22,19 +22,19 @@ public struct KHFont {
             switch self {
             
             case .Light:
-                return "SUITE Light"
+                return "SUITE-Light"
             case .Regular:
-                return "SUITE Regular"
+                return "SUITE-Regular"
             case .Medium:
-                return "SUITE Medium"
+                return "SUITE-Medium"
             case .SemiBold:
-                return "SUITE SemiBold"
+                return "SUITE-SemiBold"
             case .Bold:
-                return "SUITE Bold"
+                return "SUITE-Bold"
             case .ExtraBold:
-                return "SUITE ExtraBold"
+                return "SUITE-ExtraBold"
             case .Heavy:
-                return "SUITE Heavy"
+                return "SUITE-Heavy"
             }
         }
         
