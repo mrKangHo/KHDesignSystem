@@ -20,7 +20,7 @@ public struct KHTextField: View {
          placeHolder: String? = nil,
          symboldIcon: Image? = nil,
          keyboardType: UIKeyboardType = .default,
-         font: Font = KHFont.subTitle02) {
+                font: Font = KHFont.Callout.C02) {
         self._text = text
         self.placeHolder = placeHolder
         self.symboldIcon = symboldIcon

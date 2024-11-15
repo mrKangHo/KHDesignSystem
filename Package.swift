@@ -18,9 +18,13 @@ let package = Package(
         .target(
             name: "KHDesignSystem",
             path: "Sources/KHDesignSystem",
-            resources: [.process("Fonts/Resources/GmarketSansBold.otf"),
-                        .process("Fonts/Resources/GmarketSansLight.otf"),
-                        .process("Fonts/Resources/GmarketSansMedium.otf")]),
+            resources: [.process("Fonts/Resources/SUITE-Bold.otf"),
+                        .process("Fonts/Resources/SUITE-ExtraBold.otf"),
+                        .process("Fonts/Resources/SUITE-Heavy.otf"),
+                        .process("Fonts/Resources/SUITE-Light.otf"),
+                        .process("Fonts/Resources/SUITE-Medium.otf"),
+                        .process("Fonts/Resources/SUITE-Regular.otf"),
+                        .process("Fonts/Resources/SUITE-SemiBold.otf")]),
         .testTarget(
             name: "KHDesignSystemTests",
             dependencies: ["KHDesignSystem"]),
